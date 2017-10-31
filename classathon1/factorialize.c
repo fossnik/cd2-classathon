@@ -3,8 +3,10 @@
 
 long long factorialize(int num) {
     if (num == 1) {
+        // base case
         return 1;
     } else {
+        // recursion
         return num * factorialize(num-1);
     }
 }
