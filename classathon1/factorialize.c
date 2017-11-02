@@ -17,4 +17,5 @@ int main(int argc, char* argv[]) {
     }
     long long result = factorialize(atoi(argv[1]));
     printf("%lld\n", result);
+    return result;
 }
