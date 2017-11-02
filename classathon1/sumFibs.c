@@ -18,11 +18,17 @@ int sumFibs(int num) {
     return sum;
 }
 
-int main(void) {
-    printf("Number to Fibonacci:\n");
-    int num = get_int();
+int main(int argc, string argv[]) {
+    int seeknumber;
+    // use input arguments if provided
+    if ((argc == 2) && atoi(argv[1]) > 0) {
+        seeknumber = atoi(argv[1]);
+    } else {
+        printf("Usage: ./sumFibs k\n"); return 1;
+    }
 
-    printf("%d\n", sumFibs(num));
+    printf("%d\n", sumFibs(seeknumber));
 
-    return sumFibs(num);
+    // return the int
+    return sumFibs(seeknumber);
 }
