@@ -11,8 +11,13 @@ long long factorialize(int num) {
     }
 }
 
-int main(void) {
-    printf("Number to Factorialize:\n");
-    int num = get_int();
-    printf("%lld\n", factorialize(num));
+int main(int argc, string argv[]) {
+    int seeknumber;
+    // use input arguments if provided
+    if ((argc == 2) && atoi(argv[1]) > 0) {
+        seeknumber = atoi(argv[1]);
+    } else {
+        printf("Usage: ./factorialize k\n"); return 1;
+    }
+    printf("%lld\n", factorialize(seeknumber));
 }
