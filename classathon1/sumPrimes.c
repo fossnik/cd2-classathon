@@ -8,15 +8,10 @@ bool is_prime(int number);
 int sum_primes(int num);
 
 int main(int argc, char* argv[]) {
-    int seeknumber;
-    // use input arguments if provided
-    if ((argc == 2) && atoi(argv[1]) > 0) {
-        seeknumber = atoi(argv[1]);
-    } else {
+    if (!((argc == 2) && atoi(argv[1]) > 0)) {
         printf("Usage: ./sumPrimes k\n"); return 1;
     }
-
-    int result = sum_primes(seeknumber);
+    int result = sum_primes(atoi(argv[1]));
     printf("%d\n", result);
     return result;
 }

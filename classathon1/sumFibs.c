@@ -18,17 +18,11 @@ int sumFibs(int num) {
     return sum;
 }
 
-int main(int argc, string argv[]) {
-    int seeknumber;
-    // use input arguments if provided
-    if ((argc == 2) && atoi(argv[1]) > 0) {
-        seeknumber = atoi(argv[1]);
-    } else {
+int main(int argc, char* argv[]) {
+    if (!((argc == 2) && atoi(argv[1]) > 0)) {
         printf("Usage: ./sumFibs k\n"); return 1;
     }
-
-    printf("%d\n", sumFibs(seeknumber));
-
-    // return the int
-    return sumFibs(seeknumber);
+    int result = sumFibs(atoi(argv[1]));
+    printf("%d\n", result);
+    return result;
 }
