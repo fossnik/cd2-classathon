@@ -1,10 +1,9 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 long long factorialize(int num) {
     if (num == 1) return 1;
     else return num * factorialize(num-1);
-    }
 }
 
 int main(int argc, char* argv[]) {

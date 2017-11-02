@@ -1,5 +1,5 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int sumFibs(int num) {
     int sum = 0, first = 0, second = 1, temp;
